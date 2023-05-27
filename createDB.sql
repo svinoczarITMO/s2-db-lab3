@@ -6,11 +6,6 @@ CREATE TABLE humans (
     sex VARCHAR NOT NULL CONSTRAINT check_type CHECK (sex = 'Male' OR sex = 'Female') DEFAULT 'Female'
 );
 
-CREATE TABLE people (
-    id SERIAL PRIMARY KEY,
-    count INTEGER,
-    human_id INTEGER REFERENCES humans(id)
-);
 
 CREATE TABLE action_types (
     id SERIAL PRIMARY KEY,
